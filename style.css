@@ -31,6 +31,13 @@ header {
     justify-content: space-between;
 }
 
+.no-data {
+    font-size: 25px;
+    color: red;
+    font-weight: bold;
+    padding: 1.7rem 0;
+}
+
 .headerAnime {
     height: 5rem;
     position: fixed;

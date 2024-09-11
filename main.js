@@ -15,6 +15,10 @@ function displayProducts (productsDisplay) {
     const cardsContent = document.querySelector('.cards-contentt');
     cardsContent.innerHTML="";
 
+    if (productsDisplay.length === 0) {
+        cardsContent.innerHTML = `<p class="no-data">No data found...</p>`;
+    }
+
     productsDisplay.forEach(product => {
         cardsContent.innerHTML +=`
            <div class="card-container">
@@ -55,17 +59,22 @@ function displayProducts (productsDisplay) {
 
 // add search functionality 
 
- document.querySelector(".searchInput").addEventListener("input",(e)=>{
-    const searchItems = e.target.value.toLowerCase()
-    const filteredItems = products.filter(item => item.title.toLowerCase().includes(searchItems))
-    displayProducts(filteredItems)
-   })
+function searchProducts () {
+    document.querySelector(".searchInput").addEventListener("input",(e)=>{
+        const searchItems = e.target.value.toLowerCase()
+        const filteredItems = products.filter(item => item.title.toLowerCase().includes(searchItems))
+        displayProducts(filteredItems)
+       })
+}
+
+searchProducts() 
 
 
 
 
 // header scroll functionality 
 
+   function scrollMenu () {
     window.addEventListener("scroll", () => {
         let header = document.querySelector(".header-bottom")
         if (window.scrollY > 150) {
@@ -74,6 +83,14 @@ function displayProducts (productsDisplay) {
             header.classList.remove("headerAnime")
         }
     })
+   }
+
+   scrollMenu ()
+
+
+
+ 
+  
 
 
 
