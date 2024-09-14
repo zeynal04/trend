@@ -8,18 +8,18 @@ axios.get("https://fakestoreapi.com/products")
 })
 
 
-// showing fetched data on the screen
 
-function displayProducts (productsDisplay) {
+
+function displayProducts (productShow) {
 
     const cardsContent = document.querySelector('.cards-contentt');
     cardsContent.innerHTML="";
 
-    if (productsDisplay.length === 0) {
+    if (productShow.length === 0) {
         cardsContent.innerHTML = `<p class="no-data">No data found...</p>`;
     }
 
-    productsDisplay.forEach(product => {
+    productShow.forEach(product => {
         cardsContent.innerHTML +=`
            <div class="card-container">
                 <div class="card-image1">
@@ -56,9 +56,6 @@ function displayProducts (productsDisplay) {
         `
     })
 }
-
-// add search functionality 
-
 function searchProducts () {
     document.querySelector(".searchInput").addEventListener("input",(e)=>{
         const searchItems = e.target.value.toLowerCase()
@@ -68,12 +65,6 @@ function searchProducts () {
 }
 
 searchProducts() 
-
-
-
-
-// header scroll functionality 
-
    function scrollMenu () {
     window.addEventListener("scroll", () => {
         let header = document.querySelector(".header-bottom")
