@@ -31,32 +31,7 @@ header {
     justify-content: space-between;
 }
 
-.no-data {
-    font-size: 25px;
-    color: red;
-    font-weight: bold;
-    padding: 1.7rem 0;
-}
 
-.headerAnime {
-    height: 5rem;
-    position: fixed;
-    z-index: 999;
-    background-color: #fff;
-    top: 0;
-    animation: anime 1s forwards;
-}
-
-@keyframes anime {
-    from {
-        transform: translateY(-100px);
-    }
-
-    to {
-        transition: 1s;
-        transform: translateY(0);
-    }
-}
 
 .header-top ul {
     width: 465px;
@@ -200,6 +175,26 @@ nav ul li a .new-badge {
     height: 68px;width: 68px;
 
 }
+
+
+
+.no-data {
+    font-size: 25px;
+    color: red;
+    font-weight: bold;
+    padding: 1.7rem 0;
+}
+
+.headerAnime {
+    height: 5rem;
+    position: fixed;
+    z-index: 999;
+    background-color: #fff;
+    top: 0;
+    animation: anime 1s forwards;
+}
+
+
 .imgw img{
    
     border: 1px solid #e6e6e6;border-radius: 50%;
@@ -513,6 +508,20 @@ nav ul li a .new-badge {
     align-items: center;
     gap: 1.7rem;
 }
+
+@keyframes anime {
+    from {
+        transform: translateY(-100px);
+    }
+
+    to {
+        transition: 1s;
+        transform: translateY(0);
+    }
+}
+
+
+
 
 @media (max-width: 992px) {
     .navigat nav ul li a {
